@@ -1,0 +1,88 @@
+Server built to serve data from mongoDB to our frontend
+
+# Schemas
+
+. Users 
+ - First Name
+ - Last Name
+ - Email
+ - Admin: bool
+
+. Product
+ - Name
+ - Category
+ - Price
+ - Description
+ - Quantaty
+
+ . Cart
+  - Items
+  - Total Price
+  - User ID
+
+
+  # Routes
+
+  . Users 
+   - Post user
+   - Read user
+   - login user
+
+  . Product
+   - Get all product
+   - Get one product by ID 
+   - admin create 
+   - admin update 
+   - admin delete 
+
+  . Cart
+   - Add to cart
+   - Remove from Cart
+   - "Checkout"
+
+ # Tech Stacks
+ . Mongoose 
+ . Express
+ . Dotenv
+ . Morgand, Cors to connect to frontend 
+
+
+ # Cart Routes
+
+Create a cartRoutes file
+Private routes 
+- userId is in req.header from middleware
+
+Add item to cart 
+-trycatch 
+-get userID from reqheader
+
+Find product id - parameter or req.body
+Find user by id
+-res w/error 
+Find cart by id 
+-res w/error
+Push cart item to array 
+-save cart 
+-respond
+Remove item from cart 
+-trycatch 
+-get userID from reqheader
+
+Find game id 
+- parameter or req.body
+Find user by id
+-res w/error 
+Find card by id 
+-res w/error
+Filter/map array by item id and adjust 
+-save cart 
+-respond
+Get all cart items 
+- show cart 
+-trycatch 
+-get cart by id and populate 
+- err check 
+-respond with cart
+
+
