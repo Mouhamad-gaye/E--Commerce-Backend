@@ -6,6 +6,8 @@ import connectDB from './db/conn.mjs'
 import globalError from './middleware/globalError.mjs'
 import userRoutes from './routes/userRoutes.mjs'
 import productRoutes from './routes/productRoutes.mjs'
+import cartRoutes from './routes/cartRoutes.mjs'
+import transactionRoutes from './routes/transactionRoutes.mjs'
 
 
 
@@ -23,6 +25,8 @@ app.use(morgan("tiny"));
 //Routes
 app.use('/api/user', userRoutes)
 app.use('/api/product', productRoutes)
+app.use('/api/cart', cartRoutes)
+app.use('/api/transaction', transactionRoutes)
 
 
 //Error handling middleware. Only runs when server error occurs
